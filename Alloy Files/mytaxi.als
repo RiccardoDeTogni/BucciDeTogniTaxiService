@@ -51,6 +51,9 @@ fact{
 //queue facts
 fact{
 	actualQueue = ~queuedTaxis
+//the taxi driver that accept a request have to be listed in the actual queue identified by the request itself
+	all q:Queue, t:TaxiDriver, r:Request | r.taxi=t and r.zoneQueue=q
+		implies t in q.queuedTaxis
 }
 
 //reservation facts
@@ -65,4 +68,4 @@ fact{
 
 pred show {}
 
-run show for 4
+run show for 4 but 1 Reservation
