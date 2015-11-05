@@ -65,11 +65,11 @@ fact{
 		implies b = b'
 }
 
+
 pred showRequests {
 	#User = 3
-	#TaxiDriver = 6
-	#Request = 3
-	#Reservation = 0
+	#TaxiDriver = 10
+	
 }
-
+pred show{}
 run show for 4 but 1 Reservation
