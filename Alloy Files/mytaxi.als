@@ -61,11 +61,15 @@ fact{
 	client = ~reservation
 
 //only at most one reservation for every request
-	all b,b': Reservation | b.generatedRequest = b'.generatedRequest //deus ex machina
+	all b,b': Reservation | b.generatedRequest = b'.generatedRequest
 		implies b = b'
 }
 
-
-pred show {}
+pred showRequests {
+	#User = 3
+	#TaxiDriver = 6
+	#Request = 3
+	#Reservation = 0
+}
 
 run show for 4 but 1 Reservation
