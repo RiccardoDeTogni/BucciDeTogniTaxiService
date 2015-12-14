@@ -1,8 +1,8 @@
 //PROCESS_ANNOTATIONS
 
 protected ProcessingResult processAnnotations(RootDeploymentDescriptor bundleDesc,
-                                               ModuleScanner scanner,
-                                               ReadableArchive archive)
+                                              ModuleScanner scanner,
+                                              ReadableArchive archive)
             throws AnnotationProcessorException, IOException {
 
         // in embedded mode, I ignore all scanners and parse all possible classes.
@@ -15,7 +15,7 @@ protected ProcessingResult processAnnotations(RootDeploymentDescriptor bundleDes
 	
 	//READ_STANDARD_DEPLOYMENT_DESCRIPTOR
 	
-	public T readStandardDeploymentDescriptor(ReadableArchive archive)
+	public T/*controllare*/ readStandardDeploymentDescriptor(ReadableArchive archive)
              throws IOException, SAXParseException {
  
          InputStream is = null;
